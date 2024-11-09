@@ -1,65 +1,34 @@
-<p align="center">
-  <img width="100px" alt="pyzn-logo"
-    src="docs/logo.png"
-  />
-</p>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<h2 align="center"><code>PyZn</code></h2>
+## Getting Started
 
+First, run the development server:
 
-
-## 📜 About
-[pyzn.tech](https://pyzn.tech) is a site which aims to show statistics about Python packages.
-
-This is the repository for the backend service, if you want to check the frontend check this repo https://github.com/khulnasoft/pyzn-front
-
-## 💖 Sponsors
-
-We can keep alive the website thanks to you and also thanks to the following sponsors.
-
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=7bf782110d6c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
-
-<!-- sponsors --><a href="https://github.com/samuelcolvin"><img src="https:&#x2F;&#x2F;avatars.githubusercontent.com&#x2F;u&#x2F;4039449?u&#x3D;42eb3b833047c8c4b4f647a031eaef148c16d93f&amp;v&#x3D;4" width="60px" alt="Samuel Colvin" /></a><a href="https://github.com/sethmlarson"><img src="https:&#x2F;&#x2F;avatars.githubusercontent.com&#x2F;u&#x2F;18519037?u&#x3D;41090cc65ae0a34aee49c7a35cfbd40e2e12eb53&amp;v&#x3D;4" width="60px" alt="Seth Michael Larson" /></a><a href="https://github.com/pavdmyt"><img src="https:&#x2F;&#x2F;avatars.githubusercontent.com&#x2F;u&#x2F;10200820?u&#x3D;a470afb0d60b966be8b046d78f3a4401cbce0987&amp;v&#x3D;4" width="60px" alt="Pavel Dmytrenko" /></a><a href="https://github.com/SermetPekin"><img src="https:&#x2F;&#x2F;avatars.githubusercontent.com&#x2F;u&#x2F;96650846?u&#x3D;441ab17ab6c7b1c0690e755d46d33b0259b498f5&amp;v&#x3D;4" width="60px" alt="Sermet Pekin" /></a><!-- sponsors -->
-
-## ⚒️ Start contributing
-I wanted to make the setup of the environment as easy as possible. To start the environment you need the 
-following prerequisites:
-
-### Prerequisites
-  * bash (+4.3)
-  * docker (+17.05)
-  * docker-compose (+1.16.1)
-  * docker-py (+2.2.1)
-  * ansible (+2.3)
-  
-### Start environment
-You only (_fingers crossed_) need to execute the following to start the environment:
-
-```commandline
-make start-containers
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-## Architecture and patterns
-Principally I used some DDD concepts (like value objects, entities, and so on) and also CQS whose objective is to
-separate commands from queries.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The structure of the code is the following:
-  * `pyzn/application`: here is where all the commands and the queries are located.
-  * `pyzn/domain`: domain objects like entities, exceptions, and value objects.
-  * `pyzn/infrastructure`: infrastructure components like the implementation of the repository
-    class like DB or BigQuery, the Flask web application, the container, and so on.
-    * `pyzn/infrastructure/cli`: the command line programs.
-    * `pyzn/infrastructure/container`: config files and the dependency injection manager.
-    * `pyzn/infrastructure/api`: the api endpoints controller.
-    
-## FAQ
-**Where the downloads come from?**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-The data is retrieved from the official BigQuery repository: https://packaging.python.org/guides/analyzing-pypi-package-downloads/
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-**When the data is updated?**
+## Learn More
 
-There is a cron that runs every day at 5 pm UTC that retrieves all the new downloads from the previous day.
+To learn more about Next.js, take a look at the following resources:
 
-## 🚩 License
-The code is available under the [MIT license](LICENSE.md).
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
