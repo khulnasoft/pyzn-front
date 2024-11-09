@@ -12,7 +12,7 @@ export function formatDownloads(
     downloads /= 1_000_000;
     letter = "M";
   } else {
-    downloads = downloads / 1_000_000_000;
+    downloads /= 1_000_000_000;
     letter = "G";
   }
 
