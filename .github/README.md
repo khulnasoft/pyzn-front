@@ -21,7 +21,8 @@ This is the repository for the backend service, if you want to check the fronten
 
 We can keep alive the website thanks to you and also thanks to the following sponsors.
 
-<!-- sponsors --><!-- sponsors -->
+<!-- sponsors -->
+<!-- sponsors -->
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
