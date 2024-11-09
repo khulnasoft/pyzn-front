@@ -9,7 +9,7 @@ export function formatDownloads(
     downloads = downloads / 1_000;
     letter = "k";
   } else if (downloads < 1_000_000_000) {
-    downloads = downloads / 1_000_000;
+    downloads /= 1_000_000;
     letter = "M";
   } else {
     downloads = downloads / 1_000_000_000;
