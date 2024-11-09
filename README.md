@@ -11,7 +11,7 @@
 ## 📜 About
 [pyzn.tech](https://pyzn.tech) is a site which aims to show statistics about Python packages.
 
-This is the repository for the backend service, if you want to check the frontend check this repo https://github.com/khulnasoft/pyzn-front
+This is the repository for the backend service, if you want to check the frontend check this repo https://github.com/khulnasoft/pyzn/tree/pyzn/frontend/frontend
 
 ## 💖 Sponsors
 
