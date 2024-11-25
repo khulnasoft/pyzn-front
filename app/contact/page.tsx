@@ -12,10 +12,10 @@ export default function ContactPage() {
             Have questions or need help? Send us an email at:
           </p>
           <a
-            href="mailto:help@pepy.tech"
+            href="mailto:help@khulnasoft.com"
             className="text-xl text-blue-600 hover:underline font-medium"
           >
-            help@pepy.tech
+            help@khulnasoft.com
           </a>
         </Card>
       </div>
