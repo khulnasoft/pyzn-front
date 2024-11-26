@@ -41,12 +41,7 @@ export interface User {
   isPro: boolean;
 }
 
-export const cookieStorage = new CookieStorage({
-  secure: true,
-  httpOnly: true,
-  sameSite: 'strict',
-  domain: window.location.hostname
-});
+export const cookieStorage = new CookieStorage();
 const cognitoUserPool = new CognitoUserPool({
   UserPoolId: USER_POOL_ID,
   ClientId: CLIENT_ID,
