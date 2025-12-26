@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   tests:
@@ -44,15 +44,11 @@ jobs:
         run: npm install
       - name: Build site
         run: npx @cloudflare/next-on-pages@1
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: c26be9b36a513ce4fc9074e8071346dd
-          projectName: pyzn
-          branch:  master
-          directory: .vercel/output/static
-          # Optional: Enable this if you want to have GitHub Deployments triggered
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
-          wranglerVersion: '3'
+          command: pages deploy .vercel/output/static --project-name=pyzn

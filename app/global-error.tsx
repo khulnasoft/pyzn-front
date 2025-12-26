@@ -13,6 +13,10 @@ export default function GlobalError({
     Sentry.captureException(error);
   }, [error]);
 
+  const errorMessage = process.env.NODE_ENV === 'production' 
+    ? 'Something went wrong. Please try again later.'
+    : error.message;
+
   return (
     <html>
       <body>
